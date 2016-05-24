@@ -35,11 +35,12 @@
 {
     BOOL colorSwitches = [self.wonderfulWizard switchesFromBlackAndWhiteToColor];
     XCTAssertTrue(colorSwitches == YES, @"The color switches from black and white to color, but the `switchesFromBlackAndWhiteToColor` method indicated that it doesn't.");
+    
 }
 
 - (void)testTheMainCharacterIsCorrect
-{
-    NSString *mainCharacter = [self.wonderfulWizard mainCharacter];
+{   
+        NSString *mainCharacter = [self.wonderfulWizard mainCharacter];
    XCTAssertEqualObjects(mainCharacter, @"Dorothy", @"Incorrect main character string returned.");
 }
 

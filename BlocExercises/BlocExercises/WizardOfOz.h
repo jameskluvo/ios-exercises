@@ -10,6 +10,8 @@
 
 @interface WizardOfOz : NSObject
 
+@property NSString *publicString;
+
 /**
  Indicates whether Wizard of Oz switches from black and white to color in the middle of the movie.
  
@@ -19,5 +21,6 @@
  */
 - (BOOL) switchesFromBlackAndWhiteToColor;
 - (NSString *) mainCharacter;
+- (NSNumber *)multiplyThisNumbner:(NSNumber *) firstNumber byThisOne:(NSNumber *)secondNumber;
 
 @end
