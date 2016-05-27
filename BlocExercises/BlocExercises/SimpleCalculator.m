@@ -12,33 +12,21 @@
 
 - (NSInteger) increaseNumberBy1:(NSInteger) sourceNumber {
     /* WORK HERE */
-    sourceNumber = 17;
-    NSInteger resultNumber = sourceNumber++;
-    
-    return resultNumber;
+   
+   return sourceNumber++;
 }
 
 - (NSInteger) addNumber:(NSInteger) number1 toNumber:(NSInteger) number2 {
     /* WORK HERE */
     
-    number1 = 1;
-    number2 = 2;
+    return number1 + number2;
     
-    NSInteger resultNumber = number1 + number2;
-    
-    return resultNumber;
-    
-    //return number1;
 }
 
 - (NSInteger) remainderOfNumber:(NSInteger) dividend dividedByNumber:(NSInteger) divisor {
     /* WORK HERE */
-    
-    
-    
-    
-    
-    return 0;
+
+    return dividend % divisor;
 }
 
 @end
