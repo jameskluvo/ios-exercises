@@ -13,16 +13,26 @@
 - (NSString *) favoriteCheeseStringWithCheese:(NSString *)cheeseName {
     /* WORK HERE */
     
-    NSString *jamesFavoriteCheeseName = @"pepperjack";
+    NSString *jamesFavoriteCheeseName = cheeseName;
     
     
-    NSString *favoriteCheeseFullSentence = [NSString stringWithFormat:@"My Favorite Cheese is %@", jamesFavoriteCheeseName];
+    NSString *favoriteCheeseFullSentence = [NSString stringWithFormat:@"My Favorite Cheese is %@", cheeseName];
     
     
     return favoriteCheeseFullSentence;
     
     
+    //the above code could also be written as this:
+    
+    //return [NSString stringWithFormat:@"My Favorite Cheese is %@", cheeseName];
+    
+    
 
+}
+
+-(NSUInteger) methodThatRetunsTheSumOfTwoInts: (NSUInteger)parameterInt andAnotherInt:(NSUInteger)anotherParameterInt {
+    NSUInteger sum = parameterInt + anotherParameterInt;
+    return sum;
 }
 
 - (NSString *) cheeseNameWithoutCheeseSuffix:(NSString *)cheeseName {
@@ -47,13 +57,13 @@
         //Recreate above statements with cheese stuff
         
         //this is a string about my favorite cheese
-        NSString *cheeseStatement = @"My favorite cheese is pepperjack cheese.";
+        NSString *cheeseStatement = cheeseName;
         
         //this is identying the part of the string that contains the word "cheese"
         NSRange cheeseRange = [cheeseStatement rangeOfString:@" cheese"];
         
         // this is replacing that part of the string ("cheese") with a space, or nothing, eliminating the word "cheese"
-        NSString *cheeseStatementWithoutCheese = [cheeseStatement stringByReplacingCharactersInRange:cheeseRange withString:@" "];
+        NSString *cheeseStatementWithoutCheese = [cheeseStatement stringByReplacingCharactersInRange:cheeseRange withString:@""];
         
         //this is returning the string without "cheese"
         return cheeseStatementWithoutCheese;
@@ -85,7 +95,7 @@
         NSInteger one = 1;
         
         // writing a formatted string "There is one cheese." storing the NSInteger in %ld
-        NSString *numberOfCheeses = [NSString stringWithFormat:@"There is %ld cheese.", (long)one];
+        NSString *numberOfCheeses = [NSString stringWithFormat:@"%ld cheese.", (long)one];
         
         //returning the String
         return numberOfCheeses;
@@ -107,7 +117,11 @@
         
         //return the formatted string
         
+        // # cheeses
         
+        NSString *numberOfCheesesIfGreaterThanOne = [NSString stringWithFormat: @"%ld cheeses.", (long)cheeseCount];
+        
+        return numberOfCheesesIfGreaterThanOne;
         
         
         
