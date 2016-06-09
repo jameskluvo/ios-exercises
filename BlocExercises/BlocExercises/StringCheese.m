@@ -16,8 +16,7 @@
     NSString *jamesFavoriteCheeseName = cheeseName;
     
     
-    NSString *favoriteCheeseFullSentence = [NSString stringWithFormat:@"My Favorite Cheese is %@", cheeseName];
-    
+    NSString *favoriteCheeseFullSentence = [NSString stringWithFormat:@"My favorite cheese is %@.", cheeseName];
     
     return favoriteCheeseFullSentence;
     
