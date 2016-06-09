@@ -21,6 +21,6 @@
  */
 - (BOOL) switchesFromBlackAndWhiteToColor;
 - (NSString *) mainCharacter;
-- (NSNumber *)multiplyThisNumbner:(NSNumber *) firstNumber byThisOne:(NSNumber *)secondNumber;
+
 
 @end
