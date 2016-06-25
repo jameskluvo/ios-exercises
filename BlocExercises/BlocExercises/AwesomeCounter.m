@@ -17,12 +17,15 @@
     //For example: if number is 4 and otherNumber is 10, printed string would be 45678910
     
     
+    //lowNumber =  to highNumber
+    
+    
     //take in number and take in otherNumber, print a string of all the numbers in between
     
     //NSInteger lowNumber = number;
     //NSInteger highNumber = otherNumber;
     
-    //a string containing these numbers below aka stringWithNumbersBetweenNumber
+    
     
     for (NSInteger number; number <= otherNumber; number++) {
         <#statements#>
