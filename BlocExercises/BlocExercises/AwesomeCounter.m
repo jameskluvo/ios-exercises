@@ -28,7 +28,9 @@
     
     
     for (NSInteger number; number <= otherNumber; number++) {
-        <#statements#>
+        
+        NSLog(@"Mic check, 1,2");
+        
     }
     
     
