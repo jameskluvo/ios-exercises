@@ -17,20 +17,22 @@
     //For example: if number is 4 and otherNumber is 10, printed string would be 45678910
     
     
-    //lowNumber =  to highNumber
+    //theory:
+    //While number is not equal to other number, we should count towards that number, then print a string with those numbers
     
     
-    //take in number and take in otherNumber, print a string of all the numbers in between
-    
-    //NSInteger lowNumber = number;
-    //NSInteger highNumber = otherNumber;
+    //issue:
+    //How do you count towards another number in a loop? number++?
     
     
-    
-    for (NSInteger number; number <= otherNumber; number++) {
+    while (number != otherNumber) {
         
-        NSLog(@"Mic check, 1,2");
-        
+    }
+    
+    
+    
+    
+ 
     }
     
     
