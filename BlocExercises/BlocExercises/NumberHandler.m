@@ -12,6 +12,7 @@
 
 - (NSNumber *) numberThatIsTwiceAsBigAsNumber:(NSNumber *)number {
     /* WORK HERE */
+    //theory:
     //takes in the NSNumber number, doubles it, puts it out as the NSNumber numberThatIsTwiceAsBigAsNumber
     //need to unbox number to multiply it, then rebox it?
     
@@ -32,6 +33,7 @@
 
 - (NSArray *) arrayOfNumbersBetweenNumber:(NSInteger)number andOtherNumber: (NSInteger)otherNumber {
     /* WORK HERE */
+    //theory:
     //similar to the exercise in Loops
     
     //takes in the NSInteger number and NSInteger otherNumber
@@ -46,6 +48,7 @@
 - (NSInteger) lowestNumberInArray:(NSArray *)arrayOfNumbers {
     /* WORK HERE */
     
+    //theory:
     //unbox arrayOfNumbers, find the lowest,return as an int
     
     
