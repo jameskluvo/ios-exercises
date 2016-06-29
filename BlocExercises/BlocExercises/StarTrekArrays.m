@@ -15,6 +15,8 @@
     
     
     // String to Array
+    
+    //theory:
     // there is a string that contains the names of some characters - characterString
     // we want to convert that string into an array - arrayOfStarTrekCharactersFromString
     
@@ -81,12 +83,15 @@
     /* WORK HERE */
     
     
-    
+    //theory:
     //Looks at the array characterArray to see if "Worf" is in it
     //Return the BOOL characterArrayContainsWorf as YES or NO
     
+    //issue:
+    //not sure what to return with this array? 
     
-    //Would removing [c] cause it to search for all forms of worf? ex: Worf, WORF, wOrF etc ???
+    
+    //??? Question for Antonio: Would removing [c] cause it to search for all forms of worf? ex: Worf, WORF, wOrF etc ???
     
     NSPredicate *containsWorf = [NSPredicate predicateWithFormat:@"SELF CONTAINS[c] 'worf'"];
     
