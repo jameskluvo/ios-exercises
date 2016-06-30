@@ -18,24 +18,35 @@
     
     
     //theory:
-    //While number is not equal to other number, we should count towards that number, then print a string with those numbers
+    //When number is not equal to otherNumber, we should count from number to otherNumber, then print a string with all of the numbers
     
     
     //issue:
     //How do you count towards another number in a loop? number++?
     
     
-    while (number != otherNumber) {
+    NSString *returnString;
+    
+    if (number == otherNumber) {
+        returnString = [NSString stringWithFormat:@"%ld", number];
+    }else{
+    
+        // check to see if number is less than otherNumber, if it is, reassign one to the other
         
-    }
-    
-    
+        
+        
+        NSMutableString *mutableReturnString = [NSMutableString stringWithString:@""];
+        
+        for (long x = number; x <= otherNumber; x++) {
+            
+            [mutableReturnString appendString:[NSString stringWithFormat:@"%ld", x]];
+        }
 
- 
+        returnString = [NSString stringWithString:mutableReturnString];
     }
     
     
-    return @"";
+    return returnString;
 }
 
 @end
