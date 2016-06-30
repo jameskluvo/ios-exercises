@@ -22,15 +22,10 @@
     
     //characters: worf, picard, crusher
     
-    NSString *stringOfCharacters = @"worf;picard;crusher";
-    NSArray *arrayOfCharacters = [stringOfCharacters componentsSeparatedByString:@";"];
-    [arrayOfCharacters enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-     //Not sure what to put here
-    }];
+    //NSString *stringOfCharacters = @"worf;picard;crusher";
     
-    
-    
-    return @[];
+   return[characterString componentsSeparatedByString:@";"];
+
 }
 
 - (NSString *) stringOfStarTrekCharactersFromArray:(NSArray *)characterArray {
@@ -41,13 +36,9 @@
     // characterArray contains the name of some characters
     // we want to convert that array into a string - stringOfStarTrekCharactersFromArray
     
-    NSMutableArray *arrayOfCharacters = [@[@"worf",
-                                         @"picard",
-                                           @"crusher"] mutableCopy];
-    NSString *stringOfCharacters = [arrayOfCharacters componentsJoinedByString:@";"];
+ 
+    return [characterArray componentsJoinedByString:@";"];
     
-    
-    return stringOfCharacters;
     
     //is this all good...?
     
@@ -60,18 +51,18 @@
     //Array to Array
     //Taking in characterArray, putting out the characters in that array sorted Alphabetically as alphabeticallySortedStarTrekCharactersFromArray
     
-    NSMutableArray *alphabeticallySortedCharacters = [@[@"worf",
-                                                        @"picard",
-                                                        @"crusher"] mutableCopy];
+  
     NSSortDescriptor *alphaSortDescriptor = [[NSSortDescriptor alloc] initWithKey:nil ascending:YES selector:@selector(localizedCaseInsensitiveCompare:)];
-    [alphabeticallySortedCharacters sortUsingDescriptors:@[alphaSortDescriptor]];
+    
+    NSMutableArray *mutableCharacterArray = [characterArray mutableCopy];
+    [mutableCharacterArray sortUsingDescriptors:@[alphaSortDescriptor]];
+    return mutableCharacterArray;
     
     
     //??? Not sure what to put here or if return @[]; is okay ???
     
     
-    
-    return @[];
+   
 }
 
 
@@ -79,7 +70,7 @@
 
 
 
-- (BOOL) characterArrayContainsWorf:(NSMutableArray *)characterArray { //I changed characterArray from NSArray to NSMutableArray
+- (BOOL) characterArrayContainsWorf:(NSArray *)characterArray {
     /* WORK HERE */
     
     
@@ -93,13 +84,14 @@
     
     //??? Question for Antonio: Would removing [c] cause it to search for all forms of worf? ex: Worf, WORF, wOrF etc ???
     
-    NSPredicate *containsWorf = [NSPredicate predicateWithFormat:@"SELF CONTAINS[c] 'worf'"];
-    
-    [characterArray filterUsingPredicate:containsWorf];
+//    NSPredicate *containsWorf = [NSPredicate predicateWithFormat:@"SELF CONTAINS[c] 'worf'"];
+//    
+//    [characterArray filterUsingPredicate:containsWorf];
     
     // ??? Do I need anything else???
     
-    return NO;
+    return [characterArray containsObject:@"Worf, son of Mogh, slayer of Gowron"];
+
 }
 
 @end

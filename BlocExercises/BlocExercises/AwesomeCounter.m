@@ -27,9 +27,9 @@
     
     
     
-    for (NSInteger number; number <= otherNumber; number++) {
-        <#statements#>
-    }
+//    for (NSInteger number; number <= otherNumber; number++) {
+//        <#statements#>
+//    }
     
     
     return @"";
