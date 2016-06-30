@@ -20,16 +20,10 @@
     // issues:
     // how do I store it in the return string favoriteDrinkForStarTrekCharacterDictionary... then return it??
     
-   [characterDictionary enumerateKeysAndObjectsUsingBlock:^(id key, id obj, BOOL *stop) {
-       NSLog(@"This characters  \"%@\" is %@", key, obj);
-   }];
     
-    
-   
-    
-    return @"";
+    return [characterDictionary objectForKey:@"favorite drink"];
 }
-
+// [dict, dict, dict, dict]
 - (NSArray *)arrayOfFavoriteDrinksForStarTrekCharacters:(NSArray *)charactersArray {
     /* WORK HERE */
     
@@ -40,14 +34,13 @@
     // how do you return an array ?
     
     // ??? Question for Antonio:  How does it know to stop on drinks, and print multiple for all of the characters ???
-    
-    [charactersArray enumerateObjectsUsingBlock:^(id obj, NSUInteger idx, BOOL *stop) {
-        NSLog(@"Everyones favorite drinks are %@", obj);
-    }];
-    
-    
-    
-    return @[];
+    NSMutableArray *mutableFavDrinksArray = [[NSMutableArray alloc] init];
+    for (int i = 0; i < charactersArray.count; i++) {
+        NSDictionary *characterDict = [charactersArray objectAtIndex:i]; //this is important
+        [mutableFavDrinksArray addObject: [characterDict objectForKey:@"favorite drink"]];  //review this 
+    }
+
+    return  mutableFavDrinksArray;
 }
 
 - (NSDictionary *)dictionaryWithQuoteAddedToStarTrekCharacterDictionary:(NSDictionary *)characterDictionary {
@@ -64,12 +57,11 @@
     
     NSMutableDictionary *characterDictionaryWithQuote = [characterDictionary mutableCopy];
     [characterDictionaryWithQuote setObject:@"this is an example quote" forKey:@"quote"];
+    return characterDictionaryWithQuote;
     
     
     
     
-    
-    return @{};
 }
 
 @end
