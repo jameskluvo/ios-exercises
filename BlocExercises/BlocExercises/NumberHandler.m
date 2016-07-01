@@ -37,9 +37,10 @@
     //similar to the exercise in Loops
     
     //takes in the NSInteger number and NSInteger otherNumber
-    //puts out an array of Integers between number and otherNumber
-    //going to need to get the array of integers, then box it up...?
-    
+    // loops between number and otherNumber
+    // boxes each index into an NSNumber
+    // adds NSNumber to mutableArray
+    // returns array
     
     
     return @[];
@@ -49,7 +50,10 @@
     /* WORK HERE */
     
     //theory:
-    //unbox arrayOfNumbers, find the lowest,return as an int
+    // make mutable copy of array
+    // sort array per SO post Antonio sent
+    // unbox first object
+    // return unboxed value
     
     
     
