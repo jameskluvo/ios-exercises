@@ -33,6 +33,13 @@
     
         // check to see if number is less than otherNumber, if it is, reassign one to the other
         
+        //for descending - ex: if number is 9 and otherNumber is 4, return should be 456789
+        //need to create 2 dummy variables (x and y)
+        //if number < otherNumber
+        //then assign otherNumber to x, and number to y and run through loop below starting with x and running to y
+        //and return results as a mutablestring
+        
+        
         
         
         NSMutableString *mutableReturnString = [NSMutableString stringWithString:@""];
