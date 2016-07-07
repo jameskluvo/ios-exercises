@@ -44,20 +44,23 @@
     
     
     
-    NSArray *returnArray; //eventually what is returned
+    NSMutableArray *mutableReturnArray = [[NSMutableArray alloc]init]; //eventually what is returned
+    //NSNumber boxes all of the primitive number values
     
     
     for (long x = number; x <= otherNumber; x++) {
-        <#statements#>
+        NSNumber *boxedNumber = [NSNumber numberWithInteger:x];
+        
+        [mutableReturnArray addObject:boxedNumber];
     }
     
+    NSArray *returnArray = [NSArray arrayWithArray:mutableReturnArray];
     
    // trouble writing loop
     //??? when to box numbers???
-    
-    //return returnArray;
-    
-    return @[];
+    NSLog(@"return array = %@",returnArray);
+    return returnArray;
+ 
 }
 
 - (NSInteger) lowestNumberInArray:(NSArray *)arrayOfNumbers {
@@ -79,10 +82,12 @@
     
     //unbox first object into NSInteger
     //think the trouble is in identifying what to unbox
-    NSInteger integerToReturn = [lowestToHighest objectAtIndex:0]; //messing up somewhere here
+   return [[mutableArrayOfNumbers objectAtIndex:0] integerValue];
+    
+  
     
     
-    return integerToReturn;
+    //return integerToReturn;
 }
 
 @end
