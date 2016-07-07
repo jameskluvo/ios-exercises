@@ -36,7 +36,7 @@
     //theory:
     //similar to the exercise in Loops
     
-    //takes in the NSInteger number and NSInteger otherNumber
+    // takes in the NSInteger number and NSInteger otherNumber
     // loops between number and otherNumber
     // boxes each index into an NSNumber
     // adds NSNumber to mutableArray
@@ -44,12 +44,18 @@
     
     
     
-    NSArray *returnArray;
+    NSArray *returnArray; //eventually what is returned
+    
     
     for (long x = number; x <= otherNumber; x++) {
         <#statements#>
     }
     
+    
+   // trouble writing loop
+    //??? when to box numbers???
+    
+    //return returnArray;
     
     return @[];
 }
@@ -63,9 +69,20 @@
     // unbox first object
     // return unboxed value
     
+    //make a mutable copy of array
+    NSMutableArray *mutableArrayOfNumbers = [arrayOfNumbers mutableCopy];
+    
+    //sort array per stack overflow post antonio sent
+    //sort lowest to highest
+    NSSortDescriptor *lowestToHighest = [NSSortDescriptor sortDescriptorWithKey:@"self" ascending:YES]; //on SO this said ascending:NO
+    [mutableArrayOfNumbers sortUsingDescriptors:[NSArray arrayWithObject:lowestToHighest]];          //so to count up, switch to :YES?
+    
+    //unbox first object into NSInteger
+    //think the trouble is in identifying what to unbox
+    NSInteger integerToReturn = [lowestToHighest objectAtIndex:0]; //messing up somewhere here
     
     
-    return 0;
+    return integerToReturn;
 }
 
 @end
