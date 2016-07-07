@@ -44,6 +44,12 @@
     
     
     
+    NSArray *returnArray;
+    
+    for (long x = number; x <= otherNumber; x++) {
+        <#statements#>
+    }
+    
     
     return @[];
 }
