@@ -30,8 +30,17 @@
     if (number == otherNumber) {
         returnString = [NSString stringWithFormat:@"%ld", number];
     }else{
-    
-        
+    //otherNumber = 3, number = 9
+        if (otherNumber < number) {
+            NSInteger temp = otherNumber; // = 3
+            otherNumber = number; // = 9
+          
+            //otherNumber = 9, temp = 3, number = 9
+            number = temp;
+            
+            //otherNumber = 9, number = 3
+            
+        }
         
         NSMutableString *mutableReturnString = [NSMutableString stringWithString:@""];
         
@@ -42,34 +51,6 @@
 
         returnString = [NSString stringWithString:mutableReturnString];
     }
-    
-    // check to see if number is less than otherNumber, if it is, reassign one to the other
-    
-    //for descending - ex: if number is 9 and otherNumber is 4, return should be 456789
-    //need to create 2 dummy variables (we'll call them dummyNumber and dummyOtherNumber)
-    //if number < otherNumber
-    //then assign otherNumber to dummyOtherNumber, and number to dummyNumber and run through loop below starting with x and running to y
-    //and return results as a mutablestring
-    
-    if (number < otherNumber) {
-        
-        NSInteger *dummyNumber = &number; //why does an & symbol fix this?
-        NSInteger *dummyOtherNumber = &otherNumber;
-        
-        //tried copying the code from the above exercise
-        
-        NSMutableString *mutableReturnString = [NSMutableString stringWithString:@""];
-        
-        for (long x = *dummyOtherNumber; x <= *dummyNumber; x++) { //Xcode gave suggestions to put * infront of dummyNumber and dummyOtherNumber
-            
-            [mutableReturnString appendString:[NSString stringWithFormat:@"%ld", x]];
-        }
-        
-        returnString = [NSString stringWithString:mutableReturnString];
-        
-        
-    }
-    
     
     return returnString;
 }
